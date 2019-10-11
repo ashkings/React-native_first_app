@@ -1,11 +1,16 @@
 import React,{ Component } from 'react';
-import { StyleSheet, View, Text } from 'react-native';
+import { StyleSheet, View, Text, TouchableOpacity } from 'react-native';
 
 import Logo from '../components/logo';
 import Form from '../components/forms';
 
+import { Actions } from 'react-native-router-flux'
+import Login from './login';
 
 class Signup extends Component{
+    goBack(){
+        Actions.pop()
+    }
   render(){
     return(
       <View style={styles.container}>
@@ -13,7 +18,7 @@ class Signup extends Component{
           <Form type='Signup'/>
           <View style={styles.signupTextCont}>
               <Text style={styles.signupText}>Already have an account yet?</Text>
-              <Text style={styles.signupButton}> Sign In</Text>
+              <TouchableOpacity onPress={this.goBack}><Text style={styles.signupButton}> Sign In</Text></TouchableOpacity>
           </View>
       </View>
     )

@@ -7,9 +7,12 @@ class Form extends Component{
         return(
             <View style={styles.MainContainer}>
                 <TextInput placeholder = "Enter Email" style={styles.inputbox} 
-                underlineColorAndroid='rgba(0,0,0,0)' placeholderTextColor='#ffffff'/>
+                underlineColorAndroid='rgba(0,0,0,0)' placeholderTextColor='#ffffff'
+                selectionColor='#fff' keyboardType='email-address'
+                onSubmitEditing={()=> this.password.focus()}/>
                 <TextInput placeholder = "Enter Password" style={styles.inputbox} secureTextEntry={true}
-                underlineColorAndroid='rgba(0,0,0,0)' placeholderTextColor='#ffffff'/>
+                underlineColorAndroid='rgba(0,0,0,0)' placeholderTextColor='#ffffff'
+                ref={(input) => this.password = input}/>
                 <TouchableOpacity style={styles.button}>
                     <Text style={styles.buttonText}>{this.props.type}</Text>
                 </TouchableOpacity>
