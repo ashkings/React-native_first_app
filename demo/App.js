@@ -6,30 +6,19 @@
  * @flow
  */
 
-import React,{Component} from 'react';
-import {
-  SafeAreaView,
-  StyleSheet,
-  ScrollView,
-  View,
-  Text,
-  StatusBar,
-} from 'react-native';
+import React,{ Component } from 'react';
+import { StyleSheet, View, StatusBar } from 'react-native';
 
-import {
-  Header,
-  LearnMoreLinks,
-  Colors,
-  DebugInstructions,
-  ReloadInstructions,
-} from 'react-native/Libraries/NewAppScreen';
+import Login from './src/pages/login';
+import Signup from './src/pages/signup';
 
 class App extends Component{
   render(){
     return(
       <View style={styles.container}>
-        <StatusBar backgroundColor="black" barStyle="light-content" />
-        <Text style={{color:"#ffffff"}}>Hi There</Text>
+        <StatusBar backgroundColor="#1a313a" barStyle="light-content" />
+        <Login />
+        <Signup />
       </View>
     )
   }
