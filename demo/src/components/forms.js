@@ -3,22 +3,15 @@ import { StyleSheet, View, TextInput, TouchableOpacity, Text } from 'react-nativ
 
 
 class Form extends Component{
-    constructor(props){
-        super(props);
-        this.state={
-            email: "",
-            password:""
-        }
-    }
     render(){
         return(
             <View style={styles.MainContainer}>
                 <TextInput placeholder = "Enter Email" style={styles.inputbox} 
-                underlineColorAndroid='rgba(0,0,0,0)' placeholderTextColor='#ffffff' onChangeText={(text) => this.setState({email: text})} />
+                underlineColorAndroid='rgba(0,0,0,0)' placeholderTextColor='#ffffff'/>
                 <TextInput placeholder = "Enter Password" style={styles.inputbox} secureTextEntry={true}
-                underlineColorAndroid='rgba(0,0,0,0)' placeholderTextColor='#ffffff' onChangeText={(text) => this.setState({password: text})} />
+                underlineColorAndroid='rgba(0,0,0,0)' placeholderTextColor='#ffffff'/>
                 <TouchableOpacity style={styles.button}>
-                    <Text style={styles.buttonText}>Login</Text>
+                    <Text style={styles.buttonText}>{this.props.type}</Text>
                 </TouchableOpacity>
             </View>
         )

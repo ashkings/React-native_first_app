@@ -11,6 +11,7 @@ import { StyleSheet, View, StatusBar } from 'react-native';
 
 import Login from './src/pages/login';
 import Signup from './src/pages/signup';
+import Routes from './src/routes'
 
 class App extends Component{
   render(){
@@ -19,6 +20,7 @@ class App extends Component{
         <StatusBar backgroundColor="#1a313a" barStyle="light-content" />
         <Login />
         <Signup />
+        <Routes />
       </View>
     )
   }

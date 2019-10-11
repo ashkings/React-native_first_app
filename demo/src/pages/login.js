@@ -10,7 +10,7 @@ class Login extends Component{
     return(
       <View style={styles.container}>
           <Logo />
-          <Form />
+          <Form type='Login'/>
           <View style={styles.signupTextCont}>
               <Text style={styles.signupText}>Don't you have an account yet?</Text>
               <Text style={styles.signupButton}> Signup</Text>
